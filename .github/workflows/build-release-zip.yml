@@ -1,0 +1,33 @@
+name: Build release ZIP
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create ZIP (HACS structure)
+        run: |
+          DOMAIN="netcup_dyndns"
+          ZIP_NAME="${DOMAIN}.zip"
+
+          # Ensure structure is custom_components/<domain>/...
+          test -d "custom_components/${DOMAIN}"
+
+          mkdir -p dist
+          zip -r "dist/${ZIP_NAME}" "custom_components/${DOMAIN}" -x "*.DS_Store" -x "__pycache__/*" -x "*.pyc"
+
+          echo "Created dist/${ZIP_NAME}"
+          ls -lah dist
+
+      - name: Upload ZIP to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.zip
