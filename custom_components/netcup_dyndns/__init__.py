@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 import voluptuous as vol
-
+from homeassistant.helpers import config_validation as cv
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, ServiceCall
-from homeassistant.helpers import config_validation as cv
 
 from .const import DOMAIN, PLATFORMS, SERVICE_UPDATE
 from .coordinator import NetcupDynDnsCoordinator
 
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     hass.data.setdefault(DOMAIN, {})
