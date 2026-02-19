@@ -1,0 +1,23 @@
+{
+  "title": "Netcup DynDNS",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Netcup DynDNS",
+        "description": "Enter your Netcup CCP API credentials and the DNS record to update."
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect or authenticate with Netcup API.",
+      "unknown": "Unexpected error."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Netcup DynDNS options",
+        "description": "Adjust what to update and how often."
+      }
+    }
+  }
+}

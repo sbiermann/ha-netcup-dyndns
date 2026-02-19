@@ -1,0 +1,13 @@
+{
+  "domain": "netcup_dyndns",
+  "name": "Netcup DynDNS",
+  "codeowners": [
+    "@sbiermann"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/sbiermann/ha-netcup-dyndns",
+  "issue_tracker": "https://github.com/sbiermann/ha-netcup-dyndns/issues",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "0.1.0"
+}

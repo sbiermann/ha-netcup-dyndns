@@ -1,0 +1,39 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Netcup DynDNS verbinden",
+        "description": "Gib deine Netcup-CCP-API-Zugangsdaten und den zu aktualisierenden DNS-Record an.",
+        "data": {
+          "customer_number": "Kundennummer",
+          "api_key": "API-Key",
+          "api_password": "API-Passwort",
+          "domainname": "Domain (Zone), z.B. example.com",
+          "hostname": "Hostname, @ f\u00fcr Root",
+          "update_ipv4": "A-Record (IPv4) aktualisieren",
+          "update_ipv6": "AAAA-Record (IPv6) aktualisieren",
+          "scan_interval": "Pr\u00fcfintervall (Sekunden)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Netcup API nicht erreichbar oder Login fehlgeschlagen.",
+      "unknown": "Unerwarteter Fehler."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Netcup DynDNS Optionen",
+        "description": "Lege fest, was aktualisiert werden soll und wie h\u00e4ufig.",
+        "data": {
+          "domainname": "Domain (Zone)",
+          "hostname": "Hostname",
+          "update_ipv4": "A-Record (IPv4) aktualisieren",
+          "update_ipv6": "AAAA-Record (IPv6) aktualisieren",
+          "scan_interval": "Pr\u00fcfintervall (Sekunden)"
+        }
+      }
+    }
+  }
+}

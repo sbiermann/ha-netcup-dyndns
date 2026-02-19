@@ -1,0 +1,10 @@
+update:
+  name: Force update
+  description: Triggers an immediate DynDNS check and DNS update (if IP changed). If forced, it will also push the current IP again.
+  fields:
+    entry_id:
+      name: Entry ID
+      description: Optional config entry ID to update only one configured Netcup DynDNS entry.
+      required: false
+      selector:
+        text: {}

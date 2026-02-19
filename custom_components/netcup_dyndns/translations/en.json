@@ -1,0 +1,39 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Netcup DynDNS",
+        "description": "Enter your Netcup CCP API credentials and the DNS record to update.",
+        "data": {
+          "customer_number": "Customer number",
+          "api_key": "API key",
+          "api_password": "API password",
+          "domainname": "Domain (zone), e.g. example.com",
+          "hostname": "Hostname, use @ for root",
+          "update_ipv4": "Update A record (IPv4)",
+          "update_ipv6": "Update AAAA record (IPv6)",
+          "scan_interval": "Check interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect or authenticate with Netcup API.",
+      "unknown": "Unexpected error."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Netcup DynDNS options",
+        "description": "Adjust what to update and how often.",
+        "data": {
+          "domainname": "Domain (zone)",
+          "hostname": "Hostname",
+          "update_ipv4": "Update A record (IPv4)",
+          "update_ipv6": "Update AAAA record (IPv6)",
+          "scan_interval": "Check interval (seconds)"
+        }
+      }
+    }
+  }
+}
